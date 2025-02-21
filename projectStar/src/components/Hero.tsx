@@ -3,9 +3,9 @@ import SignupBtn from "./SignupBtn";
 
 function Hero() {
   return (
-    <section className="hero mt-10 p-10">
+    <section className="hero mt-10 pt-10 pb-20">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6">
-        <div className="hero--text max-fit content-center">
+        <div className="hero--text max-fit content-center pl-4">
           <h1 className="text-primary mb-12 pt-16 text-5xl font-bold">
             Stay Organized.
             <span className="text-secondary mt-2 block">Stay Connected.</span>
@@ -21,7 +21,7 @@ function Hero() {
           <img
             src={hero}
             alt="Image of a family sitting in a field of flowers"
-            className="max-w-lg rounded-lg"
+            className="max-w-lg rounded-2xl"
           />
         </div>
       </div>

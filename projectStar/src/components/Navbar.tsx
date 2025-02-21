@@ -3,7 +3,7 @@ import SignupBtn from "./SignupBtn";
 
 function Navbar() {
   return (
-    <header className="mx-auto flex h-24 items-center justify-between px-12">
+    <header className="mx-auto flex h-24 items-center justify-between px-12 shadow-md">
       <a href="#">
         <img src={logo} alt="FamilySync Logo" className="h-10 w-auto" />
       </a>
