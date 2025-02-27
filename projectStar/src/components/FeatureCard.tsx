@@ -1,17 +1,17 @@
 import React from "react";
 
 interface FeatureCardProps {
-  icon: jsx.Element;
+  icon: React.JSX.Element;
   header: string;
   description: string;
 }
 
 const FeatureCard = (props: FeatureCardProps) => {
   return (
-    <div className="card bg-base-100 w-96 shadow-sm">
-      <figure>{props.icon}</figure>
+    <div className="card mx-2 border-2 border-solid border-(--color-primary-50) shadow-md sm:max-w-5/6 md:max-w-full">
+      <figure className="place-self-start pt-8 pl-8">{props.icon}</figure>
       <div className="card-body">
-        <h2 className="card-title">{props.header}</h2>
+        <h4 className="card-title">{props.header}</h4>
         <p>{props.description}</p>
       </div>
     </div>
@@ -19,3 +19,13 @@ const FeatureCard = (props: FeatureCardProps) => {
 };
 
 export default FeatureCard;
+
+{
+  /* <div>
+  <figure></figure>
+  <div>
+    <h3></h3>
+    <p></p>
+  </div>
+</div>; */
+}

@@ -21,14 +21,14 @@ const featuresArr = [
     icon: <ClipboardDocumentListIcon className="text-primary size-6" />,
     header: "Tasks & Chores",
     description:
-      "Assign tasks, track progress, and make household responsibilities easier to manage. Whether it's daily chores or big projects, everyone knows what needs to be done.",
+      "Assign tasks, track progress, set deadlines, and make household duties easier to manage. Everyone knows what needs to be done.",
   },
   {
     id: 3,
     icon: <BellAlertIcon className="text-primary size-6" />,
     header: "Reminders",
     description:
-      "Never forget an important tasks or deadline. Set personalized or shared reminders for bills, medications, gatherings, and important occasions with ease.",
+      "Set personalized or shared reminders for bills, medications, gatherings, and important occasions with ease.",
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const featuresArr = [
     icon: <ListBulletIcon className="text-primary size-6" />,
     header: "Recipes & Meal Plans",
     description:
-      "Save and organize your favorite family recipes in one place. Plan meals for the week, so everyone knows what's for dinner ahead of time.",
+      "Save and organize your favorite family recipes. Plan meals for the week, so everyone knows what's for dinner ahead of time.",
   },
   {
     id: 6,
@@ -68,16 +68,23 @@ const featuresArr = [
 ];
 
 function Features() {
-  return <div>
-    {featuresArr.map((feature) => (
-      <FeatureCard
-        key={feature.id}
-        icon={feature.icon}
-        header={feature.header}
-        description={feature.description}
-      />
-    )}
-  </div>;
+  return (
+    <section className="features pb mb-20">
+      <h2 className="text-primary mb-20 text-center text-2xl font-semibold md:text-3xl">
+        Your Family’s Hub for Organization
+      </h2>
+      <div className="xs:grid-cols-2 mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-4">
+        {featuresArr.map((feature) => (
+          <FeatureCard
+            key={feature.id}
+            icon={feature.icon}
+            header={feature.header}
+            description={feature.description}
+          />
+        ))}
+      </div>
+    </section>
+  );
 }
 
 export default Features;
