@@ -7,7 +7,7 @@ function Navbar() {
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col justify-center">
         {/* Navbar */}
-        <div className="navbar w-full items-center bg-white">
+        <div className="navbar h-20 w-full items-center bg-white">
           <div className="mr-2 flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"

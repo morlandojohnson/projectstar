@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
 @import "tailwindcss";
-@plugin "daisyui";
-@plugin "daisyui/theme" {
+@plugin "daisyui" {
+  themes: false;
+}
+/* @plugin "daisyui/theme" {
   name: "light";
   default: true;
   --color-primary: #3b83f6;
   --color-secondary: #fb923c;
-}
+} */
 
 @theme {
   --breakpoint-xs: 30rem;
@@ -39,6 +41,11 @@
 
   --color-text: #374151;
   --font-nunito: "Nunito", sans-serif;
+}
+
+html {
+  margin: 0;
+  padding: 0;
 }
 
 body {
