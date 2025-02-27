@@ -2,14 +2,15 @@
 
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: false;
+  themes: light --default;
 }
-/* @plugin "daisyui/theme" {
+
+@plugin "daisyui/theme" {
   name: "light";
   default: true;
   --color-primary: #3b83f6;
   --color-secondary: #fb923c;
-} */
+}
 
 @theme {
   --breakpoint-xs: 30rem;
