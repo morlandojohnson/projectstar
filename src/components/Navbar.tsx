@@ -29,7 +29,7 @@ function Navbar() {
               </svg>
             </label>
           </div>
-          <div className="mx-2 flex flex-1 justify-center px-2 lg:justify-start">
+          <div className="-ml-8 flex flex-1 justify-center px-2 lg:mx-2 lg:justify-start">
             <a href="#">
               <img src={logo} alt="FamilySync Logo" className="h-10 w-auto" />
             </a>

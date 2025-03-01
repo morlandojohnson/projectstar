@@ -13,7 +13,7 @@ function About() {
           <img
             src={familySpace}
             alt="Collage of images. Family together in bed. Two kids reading. A mother laying next to her two children."
-            className="order-2 mx-2 rounded-2xl object-cover md:order-1 md:ml-4 md:w-2/5"
+            className="order-2 mx-4 rounded-2xl object-cover md:order-1 md:ml-4 md:w-2/5"
           />
           <div className="order-1 flex flex-col md:order-2 md:w-2/5">
             <h3 className="text-secondary mb-4 p-4 text-center text-xl font-semibold uppercase md:text-start">
@@ -40,14 +40,14 @@ function About() {
           <img
             src={organize}
             alt="Collage of images. A written shopping list. A laptop next to a planner and phone. A family gathered around in the kitchen."
-            className="mx-2 rounded-2xl object-cover md:w-2/5"
+            className="mx-4 rounded-2xl object-cover md:w-2/5"
           />
         </div>
         <div className="flex flex-col justify-center gap-12 md:flex-row">
           <img
             src={connected}
             alt="Collage of images. A family reading inside a tent. Someone scrolling images on a phone in front of a laptop. Someone writing on a weekly planner tablet."
-            className="order-2 mx-2 rounded-2xl object-cover md:order-1 md:ml-4 md:w-2/5"
+            className="order-2 mx-4 rounded-2xl object-cover md:order-1 md:ml-4 md:w-2/5"
           />
           <div className="md:oder-2 order-1 flex flex-col md:w-2/5">
             <h3 className="text-secondary md:tex-start mb-4 p-4 text-center text-xl font-semibold uppercase">

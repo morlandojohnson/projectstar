@@ -1,6 +1,6 @@
 import SignupBtn from "./SignupBtn";
 
-function CTA() {
+function CallToAction() {
   return (
     <section className="bg-base-300 pt-20 pb-20">
       <h2 className="text-primary mx-auto max-w-3/4 pb-12 text-center text-2xl font-semibold md:max-w-1/2 md:text-3xl">
@@ -14,4 +14,4 @@ function CTA() {
   );
 }
 
-export default CTA;
+export default CallToAction;
