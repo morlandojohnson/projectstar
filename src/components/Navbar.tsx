@@ -7,7 +7,7 @@ function Navbar() {
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col justify-center">
         {/* Navbar */}
-        <div className="navbar h-20 w-full items-center bg-white">
+        <div className="navbar h-20 w-full items-center bg-white shadow-md">
           <div className="mr-2 flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -29,7 +29,7 @@ function Navbar() {
               </svg>
             </label>
           </div>
-          <div className="-ml-8 flex flex-1 justify-center px-2 lg:mx-2 lg:justify-start">
+          <div className="-ml-12 flex flex-1 justify-center px-2 lg:mx-2 lg:justify-start">
             <a href="#">
               <img src={logo} alt="FamilySync Logo" className="h-10 w-auto" />
             </a>

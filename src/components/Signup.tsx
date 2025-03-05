@@ -1,18 +1,12 @@
-import logo from "../public/images/logo.png";
 import signup from "../public/images/signup.webp";
+import Header from "./Header";
 
 function Signup() {
   return (
     <>
-      <header className="sticky top-0">
-        <nav className="flex h-20 w-full items-center justify-center bg-white lg:justify-start">
-          <a href="#">
-            <img src={logo} alt="Logo" className="h-10 w-auto lg:ml-6" />
-          </a>
-        </nav>
-      </header>
+      <Header />
       {/*Signup Section*/}
-      <section>
+      <section className="pt-8">
         <div className="mx-auto min-h-screen max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="flex w-full flex-col items-center justify-center pt-40 lg:pt-0">
@@ -56,7 +50,7 @@ function Signup() {
                       className="input validator"
                       required
                       placeholder="Password"
-                      minlength="8"
+                      minLength={8}
                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                       title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
                     />
