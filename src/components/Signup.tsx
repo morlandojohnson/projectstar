@@ -24,7 +24,7 @@ function Signup() {
                     <input
                       type="text"
                       placeholder="First Name"
-                      className="input input-md"
+                      className="input input-md input-primary"
                     />
                   </label>
                   <label className="floating-label">
@@ -32,7 +32,7 @@ function Signup() {
                     <input
                       type="text"
                       placeholder="Last Name"
-                      className="input input-md"
+                      className="input input-md input-primary"
                     />
                   </label>
                   <label className="floating-label flex w-full items-center">
@@ -40,14 +40,14 @@ function Signup() {
                     <input
                       type="text"
                       placeholder="Email Address"
-                      className="input input-md"
+                      className="input input-md input-primary"
                     />
                   </label>
                   <label className="floating-label w-full">
                     <span>Password</span>
                     <input
                       type="password"
-                      className="input validator"
+                      className="input validator input-primary"
                       required
                       placeholder="Password"
                       minLength={8}

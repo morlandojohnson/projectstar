@@ -12,7 +12,7 @@ function Navbar() {
             <label
               htmlFor="my-drawer-3"
               aria-label="open sidebar"
-              className="btn btn-square btn-ghost"
+              className="btn btn-square btn-ghost hover:border-none hover:bg-white"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -29,14 +29,14 @@ function Navbar() {
               </svg>
             </label>
           </div>
-          <div className="-ml-12 flex flex-1 justify-center px-2 lg:mx-2 lg:justify-start">
+          <div className="flex flex-1 px-2 sm:justify-center lg:mx-2 lg:justify-start">
             <a href="#">
               <img src={logo} alt="FamilySync Logo" className="h-10 w-auto" />
             </a>
           </div>
           <div className="hidden flex-none lg:block">
             <ul className="flex flex-row items-center justify-between gap-8">
-              {/* Navbar Links */}
+              {/* Navbar menu content here */}
               <li>
                 <a
                   href="#"
@@ -59,6 +59,7 @@ function Navbar() {
             </ul>
           </div>
         </div>
+        {/* Page content here */}
       </div>
       <div className="drawer-side">
         <label
@@ -67,7 +68,7 @@ function Navbar() {
           className="drawer-overlay"
         ></label>
         <ul className="bg-base-200 flex min-h-full w-80 flex-col items-center gap-8 p-4 pt-16">
-          {/* Mobile Sidebar */}
+          {/* Mobile Sidebar content here */}
           <li>
             <a
               href="#"
