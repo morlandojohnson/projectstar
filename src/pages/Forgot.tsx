@@ -1,4 +1,4 @@
-import Header from "./Header";
+import Header from "../components/Header";
 import forgotImg from "../public/images/forgot-pass.webp";
 
 import { useAuth } from "../context/AuthContext";

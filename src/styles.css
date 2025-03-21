@@ -44,6 +44,11 @@
   --font-nunito: "Nunito", sans-serif;
 }
 
+.menu {
+  --menu-active-fg: var(--color-white);
+  --menu-active-bg: var(--color-primary);
+}
+
 html {
   margin: 0;
   padding: 0;

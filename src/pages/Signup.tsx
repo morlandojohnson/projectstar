@@ -1,5 +1,5 @@
 import signupImg from "../public/images/signupImg.webp";
-import Header from "./Header";
+import Header from "../components/Header";
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 
@@ -115,7 +115,7 @@ function Signup() {
                     Continue
                   </button>
                   <button
-                    className="btn text-primary border-primary w-full rounded bg-white text-base hover:bg-neutral-100 active:bg-white"
+                    className="btn text-primary border-primary w-full rounded bg-white text-base ring hover:bg-neutral-100 active:bg-white"
                     onClick={handleGoogleSignIn}
                   >
                     <FcGoogle />
