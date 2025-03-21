@@ -60,28 +60,3 @@ function Forgot() {
 }
 
 export default Forgot;
-
-/*
-    <>
-      <Header />
-      <section className="bg-base-200 flex min-h-screen items-center">
-        <div className="card mx-4 w-full max-w-lg shadow-xl sm:mx-8 sm:mx-auto lg:max-w-4xl">
-          <div className="bg-base-100 grid grid-cols-1 rounded-xl lg:grid-cols-2">
-            <div className="px-4 py-24">
-              <h2 className="text-primary mb-8 text-center text-2xl font-semibold">
-                Forgot your password?
-              </h2>
-              <p className="text-primary mb-8 px-10 text-center md:px-14">
-                We'll send you an email to reset your password
-              </p>
-              
-            </div>
-            <div className="hidden lg:block">
-              <img src={forgotImg} alt="" className="rounded-r-xl" />
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-
-*/

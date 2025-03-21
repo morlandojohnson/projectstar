@@ -48,6 +48,9 @@
   --menu-active-fg: var(--color-white);
   --menu-active-bg: var(--color-primary);
 }
+.loading {
+  width: calc(var(--size-selector, 0.25rem) * 80);
+}
 
 html {
   margin: 0;
