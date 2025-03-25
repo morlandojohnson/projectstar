@@ -1,11 +1,11 @@
 import Layout from "../components/Layout";
 
-function Dashboard() {
+function ContactUs() {
   return (
     <Layout>
-      <h1>Dashboard</h1>
+      <h1>Contact Us</h1>
     </Layout>
   );
 }
 
-export default Dashboard;
+export default ContactUs;

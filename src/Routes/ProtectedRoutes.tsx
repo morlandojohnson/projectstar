@@ -12,7 +12,11 @@ function ProtectedRoutes() {
     return <Loading />;
   }
 
-  return user ? <Outlet /> : <Navigate to="/" state={{ from: location }} />;
+  return user ? (
+    <Outlet />
+  ) : (
+    <Navigate to="/login" state={{ from: location }} />
+  );
 }
 
 export default ProtectedRoutes;

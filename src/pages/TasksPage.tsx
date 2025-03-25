@@ -1,11 +1,11 @@
 import Layout from "../components/Layout";
 
-function Dashboard() {
+function Tasks() {
   return (
     <Layout>
-      <h1>Dashboard</h1>
+      <h1>Tasks</h1>
     </Layout>
   );
 }
 
-export default Dashboard;
+export default Tasks;

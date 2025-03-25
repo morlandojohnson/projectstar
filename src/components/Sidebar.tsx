@@ -1,93 +1,127 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../public/images/logo.png";
 import { useAuth } from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+// Icons
+import { MdFamilyRestroom } from "react-icons/md";
+import { BsCalendar2DateFill } from "react-icons/bs";
+import { FaTasks } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
+import { PiCookingPotFill } from "react-icons/pi";
+import { GiMeal } from "react-icons/gi";
+import { IoMdPhotos } from "react-icons/io";
+import { AiFillMessage } from "react-icons/ai";
+import { MdOutlineContactMail } from "react-icons/md";
+import { IoHome } from "react-icons/io5";
+import { IoLogOut } from "react-icons/io5";
+
+const navLinks = [
+  {
+    id: 0,
+    name: "Home",
+    link: "/dashboard",
+    icon: <IoHome />,
+  },
+  {
+    id: 1,
+    name: "MyFamily",
+    link: "/my-family",
+    icon: <MdFamilyRestroom />,
+  },
+  {
+    id: 2,
+    name: "Calendar",
+    link: "/calendar",
+    icon: <BsCalendar2DateFill />,
+  },
+  {
+    id: 3,
+    name: "Tasks/Chores",
+    link: "/tasks",
+    icon: <FaTasks />,
+  },
+  {
+    id: 4,
+    name: "Shopping Lists",
+    link: "/shopping-list",
+    icon: <FaShoppingCart />,
+  },
+  {
+    id: 5,
+    name: "Recipes",
+    link: "/recipes",
+    icon: <PiCookingPotFill />,
+  },
+  {
+    id: 6,
+    name: "Meal Planning",
+    link: "/meal-plan",
+    icon: <GiMeal />,
+  },
+  {
+    id: 7,
+    name: "Photos",
+    link: "/photos",
+    icon: <IoMdPhotos />,
+  },
+  {
+    id: 8,
+    name: "Messages",
+    link: "/messages",
+    icon: <AiFillMessage />,
+  },
+  {
+    id: 9,
+    name: "Contact Us",
+    link: "/contact-us",
+    icon: <MdOutlineContactMail />,
+  },
+];
 
 function Sidebar() {
   const { logOut } = useAuth();
-  const navigate = useNavigate();
-
-  async function handleSubmit() {
-    try {
-      await logOut();
-      navigate("/");
-    } catch (error) {
-      console.log("Error : ", error);
-    }
-  }
+  const { pathname } = useLocation();
 
   return (
-    <section className="flex h-full flex-col items-center">
-      <nav className="mb-8 flex h-20 w-full items-center justify-start bg-white">
-        <Link to="/">
-          <img src={logo} alt="FamilySync Logo" className="ml-6 h-10 w-auto" />
+    <nav className="flex h-screen w-full flex-col">
+      <div className="mb-10 flex h-20 w-full items-center justify-start bg-white">
+        <img src={logo} alt="FamilySync Logo" className="ml-6 h-10 w-auto" />
+      </div>
+      {/* Navigation Links - Map over navLinks object to nav link buttons - styling based on hover or active state*/}
+      <div>
+        {navLinks.map((link) => (
+          <div key={link.id}>
+            <Link
+              to={link.link}
+              className={`btn btn-block justify-start border-none text-base shadow-none ${
+                pathname === link.link
+                  ? "text-primary rounded-none bg-white hover:bg-white"
+                  : "hover:bg-primary-300 rounded-none bg-transparent text-(--color-text) hover:text-white"
+              }`}
+            >
+              <span className="mx-4">{link.icon}</span>
+              <span>{link.name}</span>
+            </Link>
+          </div>
+        ))}
+      </div>
+      <div>
+        <Link
+          to="/login"
+          className={`btn btn-block justify-start border-none text-base shadow-none ${
+            pathname === "/login"
+              ? "text-primary rounded-none bg-white hover:bg-white"
+              : "hover:bg-primary-300 rounded-none bg-transparent text-(--color-text) hover:text-white"
+          }`}
+          onClick={logOut}
+        >
+          <span className="mx-4">
+            <IoLogOut />
+          </span>
+          <span>Log Out</span>
         </Link>
-      </nav>
-      <ul className="menu w-full gap-2 text-base font-semibold">
-        <li>
-          <Link to="/wall" className="text-primary">
-            Activity Wall
-          </Link>
-        </li>
-        <li>
-          <Link to="/calendar" className="text-primary">
-            Calendar
-          </Link>
-        </li>
-        <li>
-          <Link to="/tasks" className="text-primary">
-            Tasks/Chores
-          </Link>
-        </li>
-        <li>
-          <Link to="/shoppingList" className="text-primary">
-            Shopping Lists
-          </Link>
-        </li>
-        <li>
-          <Link to="/mealPlanning" className="text-primary">
-            Meal Planning
-          </Link>
-        </li>
-        <li>
-          <Link to="/recipes" className="text-primary">
-            Recipes
-          </Link>
-        </li>
-        <li>
-          <Link to="/photos" className="text-primary">
-            Photos
-          </Link>
-        </li>
-        <li>
-          <Link to="/contacts" className="text-primary">
-            Contacts
-          </Link>
-        </li>
-        <li>
-          <Link to="/messages" className="text-primary">
-            Messages
-          </Link>
-        </li>
-      </ul>
-      <ul className="menu mt-auto mb-4 w-full gap-2 text-base font-semibold">
-        <li>
-          <Link to="/familySettings" className="text-primary">
-            My Family
-          </Link>
-        </li>
-        <li>
-          <Link to="/contact" className="text-primary">
-            Contact Us
-          </Link>
-        </li>
-        <li>
-          <Link to="/messages" className="text-primary" onClick={handleSubmit}>
-            Log Out
-          </Link>
-        </li>
-      </ul>
-    </section>
+      </div>
+    </nav>
   );
 }
 

@@ -1,11 +1,11 @@
 import Layout from "../components/Layout";
 
-function Dashboard() {
+function ShoppingList() {
   return (
     <Layout>
-      <h1>Dashboard</h1>
+      <h1>Shopping Lists</h1>
     </Layout>
   );
 }
 
-export default Dashboard;
+export default ShoppingList;

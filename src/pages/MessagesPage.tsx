@@ -1,11 +1,11 @@
 import Layout from "../components/Layout";
 
-function Dashboard() {
+function MessagesPage() {
   return (
     <Layout>
-      <h1>Dashboard</h1>
+      <h1>Messages</h1>
     </Layout>
   );
 }
 
-export default Dashboard;
+export default MessagesPage;
