@@ -4,7 +4,6 @@ import Signup from "../pages/Signup";
 import Login from "../pages/Login";
 import Forgot from "../pages/Forgot";
 import Dashboard from "../pages/Dashboard";
-import ActivityWall from "../pages/ActivityWall";
 import MyFamilyPage from "../pages/MyFamilyPage";
 import Calendar from "../pages/CalendarPage";
 import Tasks from "../pages/TasksPage";
@@ -23,10 +22,6 @@ export const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard />,
-      },
-      {
-        path: "/wall",
-        element: <ActivityWall />,
       },
       {
         path: "/my-family",
